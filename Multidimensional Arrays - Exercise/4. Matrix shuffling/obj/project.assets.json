@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SoftUni\\C# Advanced\\Multidimensional Arrays - Exercise\\4. Matrix shuffling\\04. Matrix shuffling.csproj",
+      "projectUniqueName": "D:\\SoftUni\\Csharp-ADVANCED\\Multidimensional Arrays - Exercise\\4. Matrix shuffling\\04. Matrix shuffling.csproj",
       "projectName": "04. Matrix shuffling",
-      "projectPath": "D:\\SoftUni\\C# Advanced\\Multidimensional Arrays - Exercise\\4. Matrix shuffling\\04. Matrix shuffling.csproj",
+      "projectPath": "D:\\SoftUni\\Csharp-ADVANCED\\Multidimensional Arrays - Exercise\\4. Matrix shuffling\\04. Matrix shuffling.csproj",
       "packagesPath": "C:\\Users\\Irina\\.nuget\\packages\\",
-      "outputPath": "D:\\SoftUni\\C# Advanced\\Multidimensional Arrays - Exercise\\4. Matrix shuffling\\obj\\",
+      "outputPath": "D:\\SoftUni\\Csharp-ADVANCED\\Multidimensional Arrays - Exercise\\4. Matrix shuffling\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

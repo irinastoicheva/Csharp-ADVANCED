@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SoftUni\\C# Advanced\\Multidimensional Arrays - Exercise\\8. Bombs\\08. Bombs.csproj",
+      "projectUniqueName": "D:\\SoftUni\\Csharp-ADVANCED\\Multidimensional Arrays - Exercise\\8. Bombs\\08. Bombs.csproj",
       "projectName": "08. Bombs",
-      "projectPath": "D:\\SoftUni\\C# Advanced\\Multidimensional Arrays - Exercise\\8. Bombs\\08. Bombs.csproj",
+      "projectPath": "D:\\SoftUni\\Csharp-ADVANCED\\Multidimensional Arrays - Exercise\\8. Bombs\\08. Bombs.csproj",
       "packagesPath": "C:\\Users\\Irina\\.nuget\\packages\\",
-      "outputPath": "D:\\SoftUni\\C# Advanced\\Multidimensional Arrays - Exercise\\8. Bombs\\obj\\",
+      "outputPath": "D:\\SoftUni\\Csharp-ADVANCED\\Multidimensional Arrays - Exercise\\8. Bombs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
