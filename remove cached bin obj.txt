@@ -1,0 +1,4 @@
+1. Open PowerShell
+2. In github folder execute this command line:
+
+Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
