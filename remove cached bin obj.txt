@@ -2,3 +2,9 @@
 2. In github folder execute this command line:
 
 Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
+
+
+3. Now use the following steps:
+git add .
+git commit -m "some comment"
+git push
