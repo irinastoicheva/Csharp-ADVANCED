@@ -5,9 +5,13 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Odd Lines", "01. Odd Lines\01. Odd Lines.csproj", "{8A40F269-D301-49D4-ABD6-DB2038EE59AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Line Numbers", "02. Line Numbers\02. Line Numbers.csproj", "{93C4E05A-AEC8-4C37-9B2B-D7055528D0C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Line Numbers", "02. Line Numbers\02. Line Numbers.csproj", "{93C4E05A-AEC8-4C37-9B2B-D7055528D0C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Word Count", "03. Word Count\03. Word Count.csproj", "{5F20C8CB-FBEE-465B-B148-5F441B1B67EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Word Count", "03. Word Count\03. Word Count.csproj", "{5F20C8CB-FBEE-465B-B148-5F441B1B67EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Merge Files", "4. Merge Files\04. Merge Files.csproj", "{702B6BDA-8B11-4108-8B33-CA2F82337523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Slice File", "5. Slice File\5. Slice File.csproj", "{DD648408-37C9-462A-8343-9BEFA42F483A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{5F20C8CB-FBEE-465B-B148-5F441B1B67EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F20C8CB-FBEE-465B-B148-5F441B1B67EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F20C8CB-FBEE-465B-B148-5F441B1B67EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702B6BDA-8B11-4108-8B33-CA2F82337523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702B6BDA-8B11-4108-8B33-CA2F82337523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702B6BDA-8B11-4108-8B33-CA2F82337523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702B6BDA-8B11-4108-8B33-CA2F82337523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD648408-37C9-462A-8343-9BEFA42F483A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD648408-37C9-462A-8343-9BEFA42F483A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD648408-37C9-462A-8343-9BEFA42F483A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD648408-37C9-462A-8343-9BEFA42F483A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
