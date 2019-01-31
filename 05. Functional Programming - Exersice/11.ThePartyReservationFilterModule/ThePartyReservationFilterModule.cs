@@ -30,7 +30,8 @@
 
                 switch (command)
                 {
-                    case "Add filter": addFilter.Add(filterTypeAndParameter);
+                    case "Add filter":
+                        addFilter.Add(filterTypeAndParameter);
                         break;
                     case "Remove filter":
                         removeFilter.Add(filterTypeAndParameter);
@@ -65,7 +66,7 @@
                 }
 
                 predicate = GetFunc(typeFilter);
-               names.RemoveAll(x => predicate(x, parameter));
+                names.RemoveAll(x => predicate(x, parameter));
             }
 
             Console.WriteLine(string.Join(" ", names));
@@ -76,13 +77,13 @@
             switch (typeFilter)
             {
                 case "Starts with":
-                    return (x,y) => x.StartsWith(y);
+                    return (x, y) => x.StartsWith(y);
                 case "Ends with":
                     return (x, y) => x.EndsWith(y);
                 case "Contains":
-                    return(x,y) => x.Contains(y);
+                    return (x, y) => x.Contains(y);
                 case "Length":
-                    return(x,y) => x.Length == int.Parse(y);
+                    return (x, y) => x.Length == int.Parse(y);
             }
             return null;
         }

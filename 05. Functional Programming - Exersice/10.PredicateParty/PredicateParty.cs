@@ -10,6 +10,8 @@
         {
             List<string> names = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
 
+            Func<string, string, bool> predicete;
+
             while (true)
             {
                 string commandLine = Console.ReadLine();
@@ -24,39 +26,17 @@
                 string direction = line[1];
                 string criteria = line[2];
 
+                predicete = GetFunc(direction);
+
                 if (command == "Remove")
                 {
-                    if (direction == "StartsWith")
-                    {
-                        names.RemoveAll(x => x.StartsWith(criteria));
-                    }
-                    else if (direction == "EndsWith")
-                    {
-                        names.RemoveAll(x => x.EndsWith(criteria));
-                    }
-                    else if (direction == "Length")
-                    {
-                        int lenght = int.Parse(criteria);
-                        names.RemoveAll(x => x.Length == lenght);
-                    }
+                    names.RemoveAll(x => predicete(x, criteria));
                 }
                 else if (command == "Double")
                 {
                     List<string> namesForDuplication = new List<string>();
 
-                    if (direction == "StartsWith")
-                    {
-                        namesForDuplication = names.Where(x => x.StartsWith(criteria)).ToList();
-                    }
-                    else if (direction == "EndsWith")
-                    {
-                        namesForDuplication = names.Where(x => x.EndsWith(criteria)).ToList();
-                    }
-                    else if (direction == "Length")
-                    {
-                        int lenght = int.Parse(criteria);
-                        namesForDuplication = names.Where(x => x.Length == lenght).ToList();
-                    }
+                    namesForDuplication = names.Where(x => predicete(x, criteria)).ToList();
 
                     foreach (var item in namesForDuplication)
                     {
@@ -67,6 +47,26 @@
             }
 
             Console.WriteLine(names.Any()? $"{string.Join(", ", names)} are going to the party!" : "Nobody is going to the party!");
+        }
+
+        public static Func<string, string, bool> GetFunc(string direction)
+        {
+            if (direction == "StartsWith")
+            {
+                return(x,y) => x.StartsWith(y);
+            }
+            else if (direction == "EndsWith")
+            {
+                return (x,y) => x.EndsWith(y);
+            }
+            else if (direction == "Length")
+            {
+                return (x,y) => x.Length == int.Parse(y);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
