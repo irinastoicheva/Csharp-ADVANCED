@@ -33,87 +33,44 @@
                     case "Reverse":
                         if (exclude.Contains(filterTypeAndParameter))
                         {
-                            exclude.Reverse();
                             exclude.Remove(filterTypeAndParameter);
-                            exclude.Reverse();
                         }
                         break;
                 }
             }
 
-            while (exclude.Count > 0)
+            exclude.Reverse();
+
+            foreach (var filter in exclude)
             {
-                string[] filterAndParameter = exclude[0].Split(":");
+                string[] filterAndParameter = filter.Split(":");
                 string filterType = filterAndParameter[0];
                 int parameter = int.Parse(filterAndParameter[1]);
 
-                switch (filterType)
-                {
-                    case "Sum Left":
-                        sequence = Sum(sequence, parameter, -1);
-                        break;
-                    case "Sum Right":
-                        sequence = Sum(sequence, parameter, +1);
-                        break;
-                    case "Sum Left Right":
-                        sequence = Sum(sequence, parameter);
-                        break;
-                }
-
-                exclude.RemoveAt(0);
+                sequence = Exclude(sequence, parameter, filterType);
             }
 
             Console.WriteLine(string.Join(" ", sequence));
         }
 
-        private static List<int> Sum(List<int> sequence, int parameter)
+        private static List<int> Exclude(List<int> sequence, int parameter, string filterType)
         {
-            int sum = 0;
+            Func<string, string, bool> funcContains = (x, y) => x.Contains(y);
+
             for (int i = 0; i < sequence.Count; i++)
             {
-                if (!sequence.Any())
+                int leftNumber = (i == 0) ? 0 : sequence[i - 1];
+                int rightNumbes = (i == sequence.Count - 1) ? 0 : sequence[i + 1];
+                int sum = sequence[i];
+
+                if (funcContains(filterType, "Left"))
                 {
-                    break;
-                }
-                else if (i == 0)
-                {
-                    sum = sequence[0];
-                    if (i + 1 < sequence.Count)
-                    {
-                        sum += sequence[i + 1];
-                    }
-                }
-                else if (i == sequence.Count - 1)
-                {
-                    sum = sequence[i] + sequence[i - 1];
-                }
-                else
-                {
-                    sum = sequence[i - 1] + sequence[i] + sequence[i + 1];
+                    sum += leftNumber;
                 }
 
-                if (sum == parameter)
+                if (funcContains(filterType,"Right"))
                 {
-                    sequence.RemoveAt(i);
-                    i--;
-                }
-            }
-
-            return sequence;
-        }
-
-        private static List<int> Sum(List<int> sequence, int parameter, int v)
-        {
-            int sum = 0;
-            for (int i = 0; i < sequence.Count; i++)
-            {
-                if (i + v > sequence.Count - 1 || i + v <= 0)
-                {
-                    sum = sequence[i];
-                }
-                else
-                {
-                    sum = sequence[i] + sequence[i + v];
+                    sum += rightNumbes;
                 }
 
                 if (sum == parameter)
