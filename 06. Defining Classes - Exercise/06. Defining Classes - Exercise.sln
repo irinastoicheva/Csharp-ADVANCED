@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.SpeedRacing", "07.SpeedR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.RawData", "08.RawData\08.RawData.csproj", "{DE599680-E7ED-406B-9500-566BD244CF3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.DefineaClassPerson", "01.DefineaClassPerson\01.DefineaClassPerson.csproj", "{865380FE-706A-4879-8ACF-64B58F69329A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DE599680-E7ED-406B-9500-566BD244CF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE599680-E7ED-406B-9500-566BD244CF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE599680-E7ED-406B-9500-566BD244CF3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865380FE-706A-4879-8ACF-64B58F69329A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865380FE-706A-4879-8ACF-64B58F69329A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865380FE-706A-4879-8ACF-64B58F69329A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865380FE-706A-4879-8ACF-64B58F69329A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
