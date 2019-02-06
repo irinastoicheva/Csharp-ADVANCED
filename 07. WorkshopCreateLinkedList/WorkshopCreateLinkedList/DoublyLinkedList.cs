@@ -123,13 +123,23 @@
         {
             object[] arr = new object[this.Count];
 
-            for (int i = this.Count - 1; i >= 0; i--)
+            for (int i = 0; i < this.Count; i++)
             {
                 arr[i] = this.head.Value;
                 this.head = this.head.Next;
             }
 
             return arr;
+        }
+
+        public void ForEach(Action<object> action)
+        {
+            ListNode node = this.head;
+            while (node != null)
+            {
+                action(node.Value);
+                node = node.Next;
+            }
         }
 
         public void IsValidateLinkedList()

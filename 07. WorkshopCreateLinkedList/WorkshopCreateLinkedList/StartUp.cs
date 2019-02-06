@@ -13,10 +13,8 @@
             linkedList.AddHead(4);
             linkedList.AddHead(5);
 
-            foreach (var item in linkedList.ToArrayLinkedList())
-            {
-                Console.WriteLine(item);
-            }
+            
+            linkedList.ForEach(n => Console.WriteLine(n));
         }
     }
 }
