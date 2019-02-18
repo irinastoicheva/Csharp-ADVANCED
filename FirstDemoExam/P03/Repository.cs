@@ -5,20 +5,19 @@ namespace Repository
     public class Repository
     {
         private Dictionary<int, Person> list;
+        private int id;
 
         public Repository()
         {
             this.list = new Dictionary<int, Person>();
+            this.id = 0;
         }
 
-
-        public int Count { get; set; } = 0;
-        public int Id { get; set; } = -1;
+        public int Count => this.list.Count;
 
         public void Add(Person person)
         {
-            list[++this.Id] = person;
-            this.Count++;
+            list[this.id++] = person;
         }
 
         public Person Get(int id)
@@ -31,7 +30,7 @@ namespace Repository
         {
             if (list.ContainsKey(id))
             {
-                list[id] = newPerson;
+                this.list[id] = newPerson;
                 return true;
             }
 
@@ -42,8 +41,7 @@ namespace Repository
         {
             if (list.ContainsKey(id))
             {
-                list.Remove(id);
-                this.Count--;
+                this.list.Remove(id);
                 return true;
             }
 
