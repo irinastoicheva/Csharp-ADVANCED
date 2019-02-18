@@ -19,7 +19,7 @@
 
                 matrix[i] = rowInput;
             }
-           
+
             string[] commandLine = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
             string command = commandLine[0];
             string header = commandLine[1];
@@ -29,18 +29,16 @@
             {
                 case "filter":
                     string value = commandLine[2];
-                    int rowIndex = -1;
+                    Console.WriteLine(string.Join(" | ", headerRow));
 
                     for (int i = 0; i < matrix.Length; i++)
                     {
                         if (matrix[i][index] == value)
                         {
-                            rowIndex = i;
+                            Console.WriteLine(string.Join(" | ", matrix[i]));
                         }
                     }
-                    Console.WriteLine(string.Join(" | ", headerRow));
-                    Console.WriteLine(string.Join(" | ", matrix[rowIndex]));
-                    
+
                     break;
 
                 case "hide":
@@ -49,7 +47,9 @@
                     Console.WriteLine(string.Join(" | ", headerRow));
                     for (int i = 0; i < matrix.Length; i++)
                     {
-                        Console.WriteLine(string.Join(" | ", matrix[i].Where(x => x != header)));
+                        List<string> temp = new List<string>(matrix[i]);
+                        temp.RemoveAt(index);
+                        Console.WriteLine(string.Join(" | ", temp));
                     }
 
                     break;
