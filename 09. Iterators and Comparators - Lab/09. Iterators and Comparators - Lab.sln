@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Library", "01.Library\01
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.LibraryIterator", "02.LibraryIterator\02.LibraryIterator.csproj", "{87C25979-95EA-478B-A0E0-CCCBB35D51E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ComparableBook", "03.ComparableBook\03.ComparableBook.csproj", "{053B76A6-12D8-403E-A105-2CA2C6EE077F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BookComparer", "04.BookComparer\04.BookComparer.csproj", "{269E1373-834B-4732-BC9D-D900569389A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{87C25979-95EA-478B-A0E0-CCCBB35D51E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87C25979-95EA-478B-A0E0-CCCBB35D51E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87C25979-95EA-478B-A0E0-CCCBB35D51E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053B76A6-12D8-403E-A105-2CA2C6EE077F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053B76A6-12D8-403E-A105-2CA2C6EE077F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053B76A6-12D8-403E-A105-2CA2C6EE077F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053B76A6-12D8-403E-A105-2CA2C6EE077F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{269E1373-834B-4732-BC9D-D900569389A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269E1373-834B-4732-BC9D-D900569389A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269E1373-834B-4732-BC9D-D900569389A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269E1373-834B-4732-BC9D-D900569389A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
