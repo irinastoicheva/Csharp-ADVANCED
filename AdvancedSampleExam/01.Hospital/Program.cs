@@ -1,33 +1,94 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿
 namespace _01.Hospital
 {
-    class Program
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Dictionary<string, string[][]> departments = new Dictionary<string, string[][]>();
-            Dictionary<string, List<string>> doctors = new Dictionary<string, List<string>>();
+            Dictionary<string, Dictionary<int, List<string>>> departmentRoomPatient = new Dictionary<string, Dictionary<int, List<string>>>();
+            Dictionary<string, List<string>> doctorPatient = new Dictionary<string, List<string>>();
 
-            string input = Console.ReadLine();
-
-            while (input != "Output")
+            while (true)
             {
-                string[] token = input.Split();
-                string department = token[0];
-                string doctor = token[1] + " " + token[2];
-                string patient = token[3];
-
-                if (!departments.ContainsKey(department))
+                string[] commandLine = Console.ReadLine().Split();
+                if (commandLine[0] == "Output")
                 {
-                    departments[department] = new string[20][];
-                    departments[department][0] = new string[3];
+                    break;
                 }
 
-                for (int room = 0; room < 20; room++)
-                {
+                string department = commandLine[0];
+                string doctor = commandLine[1] + " " + commandLine[2];
+                string patient = commandLine[3];
 
+                if (!departmentRoomPatient.ContainsKey(department))
+                {
+                    departmentRoomPatient[department] = new Dictionary<int, List<string>>();
+                    for (int i = 1; i <= 20; i++)
+                    {
+                        departmentRoomPatient[department].Add(i, new List<string>());
+                    }
+                }
+
+                for (int i = 1; i <= 20; i++)
+                {
+                    if (departmentRoomPatient[department][i].Count < 3)
+                    {
+                        departmentRoomPatient[department][i].Add(patient);
+
+                        if (!doctorPatient.ContainsKey(doctor))
+                        {
+                            doctorPatient[doctor] = new List<string>();
+                        }
+
+                        doctorPatient[doctor].Add(patient);
+                        break;
+                    }
+                }
+            }
+
+            while (true)
+            {
+                string[] commandLine = Console.ReadLine().Split();
+                if (commandLine[0] == "End")
+                {
+                    break;
+                }
+
+                if (commandLine.Length == 1)
+                {
+                    string department = commandLine[0];
+                    foreach (var room in departmentRoomPatient[department])
+                    {
+                        foreach (var patient in room.Value)
+                        {
+                            Console.WriteLine(patient);
+                        }
+                    }
+                }
+
+                else
+                {
+                    string doctorName = commandLine[0] + " " + commandLine[1];
+                    if (doctorPatient.ContainsKey(doctorName))
+                    {
+                        foreach (var patient in doctorPatient[doctorName].OrderBy(x => x))
+                        {
+                            Console.WriteLine(patient);
+                        }
+                    }
+                    else
+                    {
+                        string department = commandLine[0];
+                        int room = int.Parse(commandLine[1]);
+                        foreach (var patient in departmentRoomPatient[department][room].OrderBy(x => x))
+                        {
+                            Console.WriteLine(patient);
+                        }
+                    }
                 }
             }
         }
